@@ -1,0 +1,54 @@
+@import '../../containers/Globales.scss';
+@import '../../assets/styles/Mixins.scss';
+
+.Twittear {
+  border: 2px solid $border-color;
+  border-bottom: 15px solid $border-color;
+  padding: 10px;
+  display: flex;
+  &__img {
+    img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  &__details {
+    width: 100%;
+    &--text {
+      textarea {
+        margin-left: 20px;
+        width: 90%;
+        height: 100%;
+        font-size: 2em;
+        background-color: $backgroun-color;
+        border: none;
+        &::placeholder {
+          color: rgb(158, 158, 158);
+          font-weight: lighter;
+        }
+      }
+    }
+    &--settings {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ul {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        li {
+          margin: 0 10px;
+          i {
+            font-size: 30px;
+            color: $button-color;
+          }
+        }
+      }
+      button {
+        @include button;
+      }
+    }
+  }
+}

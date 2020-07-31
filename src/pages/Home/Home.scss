@@ -1,0 +1,14 @@
+.Home {
+  padding: 10px 30px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      font-weight: 900;
+    }
+    i {
+      font-size: 20px;
+    }
+  }
+}

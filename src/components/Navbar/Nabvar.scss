@@ -1,0 +1,90 @@
+@import '../../containers/Globales.scss';
+@import '../../assets/styles/Mixins.scss';
+
+.Navbar {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  ul {
+    padding: 0;
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+    }
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px 10px 10px;
+    width: 40px;
+    i {
+      font-size: 30px;
+    }
+    img {
+      width: 35px;
+    }
+  }
+  .button {
+    @include button;
+    margin: auto;
+    justify-content: center;
+    i {
+      display: none;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    &--img img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    &--info {
+      margin: 10px 5px 10px 15px;
+      h3 {
+        margin: 0;
+        font-weight: 800;
+      }
+      span {
+        font-size: 1.15em;
+        color: rgb(165, 165, 165);
+      }
+    }
+    &--icon {
+      margin-left: 30px;
+      i {
+        font-size: 25px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .Navbar {
+    h2 {
+      display: none;
+    }
+    &__profile--info,
+    &__profile--icon {
+      display: none;
+    }
+    .button {
+      width: 50px;
+      span {
+        display: none;
+      }
+      i {
+        display: inline-block;
+      }
+    }
+  }
+}

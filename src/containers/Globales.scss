@@ -1,0 +1,16 @@
+$backgroun-color: #15202b;
+$tipography: white;
+$button-color: #1da1f2;
+$border-color: #253341;
+body {
+  background-color: $backgroun-color;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $tipography;
+  a {
+    color: $tipography;
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+  }
+}

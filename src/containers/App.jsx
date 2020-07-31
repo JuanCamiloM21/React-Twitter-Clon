@@ -1,8 +1,21 @@
 import React from 'react';
-import Hello from '../components/Hello';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from '../pages/Home/Home';
+import Profile from '../pages/Profile';
+import './Globales.scss';
+import Layout from '../components/Layout/Layout';
 
 const App = () => {
-  return <Hello />;
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Switch>
+          <Route exact path='/:username' component={Profile} />
+          <Route exact path='/' component={Home} />
+        </Switch>
+      </Layout>
+    </BrowserRouter>
+  );
 };
 
 export default App;
