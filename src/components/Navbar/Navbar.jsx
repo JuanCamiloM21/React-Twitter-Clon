@@ -3,6 +3,19 @@ import { Link } from 'react-router-dom';
 import './Nabvar.scss';
 import more from '../../assets/img/more.png';
 import profile from '../../assets/img/profile.jpg';
+import {
+  Home,
+  Logo,
+  Hashtag,
+  Bell,
+  Send,
+  Tags,
+  Book,
+  Settings,
+  Profile,
+  Button,
+  Search,
+} from '../../assets/img/Icon';
 
 const Navbar = () => {
   return (
@@ -12,94 +25,95 @@ const Navbar = () => {
           <li>
             <Link to='/'>
               <div className='Navbar__icon'>
-                <i className='fab fa-twitter' />
+                <Logo />
               </div>
             </Link>
           </li>
           <li>
             <Link to='/'>
               <div className='Navbar__icon'>
-                <i className='fas fa-home' />
+                <Home />
               </div>
               <div className='Nabvar__item'>
-                <h2>Inicio</h2>
+                <h3>Inicio</h3>
               </div>
             </Link>
           </li>
           <li>
             <Link to='/'>
               <div className='Navbar__icon'>
-                <i className='fas fa-hashtag' />
+                <Hashtag />
+                <Search />
               </div>
               <div className='Nabvar__item'>
-                <h2>Explorar</h2>
+                <h3>Explorar</h3>
               </div>
             </Link>
           </li>
           <li>
             <Link to='/'>
               <div className='Navbar__icon'>
-                <i className='far fa-bell' />
+                <Bell />
               </div>
               <div className='Nabvar__item'>
-                <h2>Notificaciones</h2>
+                <h3>Notificaciones</h3>
               </div>
             </Link>
           </li>
           <li>
             <Link to='/'>
               <div className='Navbar__icon'>
-                <i className='far fa-envelope' />
+                <Send />
               </div>
               <div className='Nabvar__item'>
-                <h2>Mensajes</h2>
+                <h3>Mensajes</h3>
               </div>
             </Link>
           </li>
           <li>
             <Link to='/'>
               <div className='Navbar__icon'>
-                <i className='far fa-bookmark' />
+                <Tags />
               </div>
               <div className='Nabvar__item'>
-                <h2>Guardados</h2>
+                <h3>Guardados</h3>
               </div>
             </Link>
           </li>
           <li>
             <Link to='/'>
               <div className='Navbar__icon'>
-                <i className='far fa-list-alt' />
+                <Book />
               </div>
               <div className='Nabvar__item'>
-                <h2>Listas</h2>
+                <h3>Listas</h3>
               </div>
             </Link>
           </li>
           <li>
             <Link to='/'>
               <div className='Navbar__icon'>
-                <i className='far fa-user' />
+                <Profile />
               </div>
               <div className='Nabvar__item'>
-                <h2>Perfil</h2>
+                <h3>Perfil</h3>
               </div>
             </Link>
           </li>
           <li>
             <Link to='/'>
               <div className='Navbar__icon'>
-                <img src={more} alt='more' />
+                <Settings />
               </div>
               <div className='Nabvar__item'>
-                <h2>Más Opciones</h2>
+                <h3>Más Opciones</h3>
               </div>
             </Link>
           </li>
           <li>
             <a href='' className='button'>
               <span>Twittear</span>
-              <i className='fas fa-plus' />
+              <Button />
             </a>
           </li>
           <li className='Navbar__profile'>
@@ -107,7 +121,7 @@ const Navbar = () => {
               <img src={profile} alt='Profile' />
             </div>
             <div className='Navbar__profile--info'>
-              <h3>Nombre</h3>
+              <h4>Nombre</h4>
               <span>@Usuario</span>
             </div>
             <div className='Navbar__profile--icon'>

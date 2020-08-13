@@ -1,10 +1,21 @@
+@import '../../containers/Globales.scss';
+
 .Home {
-  padding: 10px 30px;
+  // padding: 10px 0;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  overflow-y: scroll;
+  height: 1000px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   &__header {
     display: flex;
+    padding: 0 15px;
     justify-content: space-between;
     align-items: center;
-    h2 {
+    h3 {
       font-weight: 900;
     }
     i {

@@ -1,0 +1,52 @@
+@import '../../containers/Globales.scss';
+@import '../../assets/styles/Mixins.scss';
+
+.TweetBox {
+  padding: 10px 15px;
+  display: flex;
+  border-bottom: 1px solid $border-color;
+
+  &__image {
+    margin-right: 10px;
+    img {
+      border-radius: 50%;
+      width: 49px;
+      height: 49px;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    &--header {
+      display: flex;
+      h4 {
+        margin: 0;
+        font-size: 0.95em;
+      }
+      span {
+        margin-left: 5px;
+        font-size: 0.95em;
+        color: $light-font;
+      }
+    }
+    &--text {
+      p {
+        margin: 0;
+        font-size: 0.95em;
+      }
+      img {
+        margin-top: 10px;
+        border-radius: 15px;
+        width: 100%;
+      }
+    }
+    &--footer {
+      width: 90%;
+      ul {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

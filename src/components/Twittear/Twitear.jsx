@@ -1,6 +1,7 @@
 import React from 'react';
 import './Twittear.scss';
 import Profile from '../../assets/img/profile.jpg';
+import { Gallery, Gif, Staticst, Emoji, Calendar } from '../../assets/img/Icon';
 
 const Twittear = () => {
   return (
@@ -10,33 +11,33 @@ const Twittear = () => {
       </div>
       <div className='Twittear__details'>
         <div className='Twittear__details--text'>
-          <textarea placeholder='¿Qué esta pasando?' />
+          <input placeholder='¿Qué esta pasando?' />
         </div>
         <div className='Twittear__details--settings'>
           <ul>
             <li>
               <a href='#'>
-                <i className='far fa-image' />
+                <Gallery />
               </a>
             </li>
             <li>
               <a href='#'>
-                <i className='fab fa-git-square' />
+                <Gif />
               </a>
             </li>
             <li>
               <a href='#'>
-                <i className='fas fa-poll-h' />
+                <Staticst />
               </a>
             </li>
             <li>
               <a href='#'>
-                <i className='far fa-smile' />
+                <Emoji />
               </a>
             </li>
             <li>
               <a href='#'>
-                <i className='far fa-calendar-check' />
+                <Calendar />
               </a>
             </li>
           </ul>

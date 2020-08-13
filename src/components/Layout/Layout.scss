@@ -1,4 +1,16 @@
 .Layout {
   display: grid;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-columns: 20% 50% 30%;
+}
+
+@media (max-width: 1279px) {
+  .Layout {
+    grid-template-columns: 10% 60% 30%;
+  }
+}
+
+@media (max-width: 767px) {
+  .Layout {
+    grid-template-columns: 10% 90%;
+  }
 }

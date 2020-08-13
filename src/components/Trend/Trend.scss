@@ -1,3 +1,166 @@
+@import '../../containers/Globales.scss';
+
 .Trend {
-  border: 1px solid red;
+  padding: 10px 5px;
+
+  &__search {
+    margin: 0 auto 13px;
+    display: flex;
+    background-color: #253341;
+    width: 90%;
+    height: 42px;
+    border-radius: 30px;
+    align-items: center;
+
+    input {
+      width: 80%;
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      height: 40px;
+      font-size: 1em;
+      padding-left: 20px;
+
+      &::placeholder {
+        color: $light-font;
+      }
+    }
+
+    i {
+      font-size: 20px;
+      margin-left: 20px;
+      color: $light-font;
+    }
+  }
+
+  &__timeline {
+    background-color: $trends-color;
+    width: 90%;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px 0 0 0;
+    box-sizing: border-box;
+    h3 {
+      margin: 0 0 15px 0;
+      padding: 0 20px;
+    }
+    &--more {
+      padding: 15px;
+      border-top: 1px solid $border-color;
+      font-size: 0.95em;
+      a {
+        color: $button-color;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    padding: 10px 15px;
+    border-top: 1px solid $border-color;
+    &--info {
+      span {
+        font-size: 0.81em;
+        color: $light-font;
+      }
+      h4 {
+        margin: 2px 0;
+        font-size: 0.95em;
+      }
+    }
+    &--img img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  }
+
+  .Follow {
+    background-color: $trends-color;
+    width: 90%;
+    margin: 15px auto 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 15px 0 0 0;
+
+    h2 {
+      margin: 0 15px 10px;
+      font-size: 1.43em;
+    }
+    &__item {
+      box-sizing: border-box;
+      position: relative;
+      height: 70px;
+      padding: 10px 15px;
+      display: flex;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      align-items: center;
+
+      &--img img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      &--info {
+        margin-left: 15px;
+        h4 {
+          margin: 2px 0;
+          font-size: 0.95em;
+        }
+        span {
+          font-size: 0.95em;
+          color: $light-font;
+        }
+      }
+      button {
+        position: absolute;
+        right: 15px;
+        width: 77px;
+        height: 30px;
+        border: 1px solid $button-color;
+        background-color: rgba(255, 255, 255, 0);
+        color: $button-color;
+        outline: none;
+        border-radius: 15px;
+      }
+    }
+    &__more {
+      padding: 15px;
+      font-size: 0.95em;
+      a {
+        color: $button-color;
+      }
+    }
+  }
+  &__FAQ {
+    box-sizing: border-box;
+    width: 90%;
+    margin: 20px auto;
+    padding: 0 15px;
+    font-size: 0.82em;
+    ul {
+      margin: 2px 0;
+      padding: 0;
+      display: flex;
+      li {
+        margin: 2px 0;
+        padding: 0;
+      }
+    }
+    span {
+      margin: 2px 0;
+      padding: 0 10px 0 0;
+      color: $light-font;
+    }
+    a {
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Trend {
+    display: none;
+  }
 }

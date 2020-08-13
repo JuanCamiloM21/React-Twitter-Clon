@@ -6,12 +6,12 @@
   justify-content: center;
   padding: 0 20px;
   ul {
+    margin: 0;
     padding: 0;
     li {
       a {
         display: flex;
         align-items: center;
-        margin: 10px 0;
       }
     }
   }
@@ -20,13 +20,14 @@
     justify-content: center;
     margin: 10px 10px 10px 10px;
     width: 40px;
-    i {
-      font-size: 30px;
-    }
-    img {
-      width: 35px;
+    .Search-icon {
+      display: none;
     }
   }
+  .Button-icon {
+    display: none;
+  }
+
   .button {
     @include button;
     margin: auto;
@@ -42,19 +43,19 @@
     justify-content: center;
     align-items: center;
     &--img img {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       object-fit: cover;
     }
     &--info {
       margin: 10px 5px 10px 15px;
-      h3 {
+      h4 {
         margin: 0;
-        font-weight: 800;
+        font-weight: 700;
       }
       span {
-        font-size: 1.15em;
+        font-size: 1em;
         color: rgb(165, 165, 165);
       }
     }
@@ -70,13 +71,24 @@
 
 @media (max-width: 1279px) {
   .Navbar {
-    h2 {
+    h3 {
       display: none;
     }
     &__profile--info,
     &__profile--icon {
       display: none;
     }
+
+    .Search-icon {
+      display: block;
+    }
+    .Hashtag-icon {
+      display: none;
+    }
+    .Button-icon {
+      display: block;
+    }
+
     .button {
       width: 50px;
       span {
