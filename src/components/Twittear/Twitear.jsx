@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Twittear.scss';
 import Profile from '../../assets/img/profile.jpg';
 import { Gallery, Gif, Staticst, Emoji, Calendar } from '../../assets/img/Icon';
+import db from '../../../firebase';
 
 const Twittear = () => {
+  const [tweetMessage, setTweetMessage] = useState('');
+
+  const sendTweet = (e) => {
+    e.preventDefault();
+
+    db.collection('posts').add({
+      name: 'Juan Camilo Moreno',
+      userName: 'JuanCamiloM21',
+      avatar:
+        'https://s.gravatar.com/avatar/eca2c29ebc21e6971f9d456eb53f4812?s=80',
+      image: '',
+      text: tweetMessage,
+    });
+
+    setTweetMessage('');
+  };
+
   return (
     <div className='Twittear'>
       <div className='Twittear__img'>
-        <img src={Profile} alt='' />
+        <img src={Profile} alt='Profile' />
       </div>
-      <div className='Twittear__details'>
+      <form className='Twittear__details'>
         <div className='Twittear__details--text'>
-          <input placeholder='¿Qué esta pasando?' />
+          <input
+            value={tweetMessage}
+            placeholder='¿Qué esta pasando?'
+            onChange={(e) => setTweetMessage(e.target.value)}
+          />
         </div>
         <div className='Twittear__details--settings'>
           <ul>
@@ -41,9 +63,11 @@ const Twittear = () => {
               </a>
             </li>
           </ul>
-          <button type='button'>Twittear</button>
+          <button type='submit' onClick={sendTweet}>
+            Twittear
+          </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
