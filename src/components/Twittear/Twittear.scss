@@ -43,6 +43,7 @@
         justify-content: center;
         li {
           margin: 0 10px;
+
           i {
             font-size: 28px;
             color: $button-color;
@@ -53,6 +54,34 @@
         @include button;
         padding: 0 15px;
         height: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .Twittear__details--settings {
+    ul {
+      li {
+        margin: 0 3px;
+      }
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .Twittear__details--settings {
+    ul {
+      padding-right: 0;
+
+      li {
+        margin: 0 7px;
+      }
+      .Calendar {
+        display: none;
+      }
+      .Staticst {
+        display: none;
       }
     }
   }
