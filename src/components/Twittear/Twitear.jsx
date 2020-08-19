@@ -15,7 +15,8 @@ const Twittear = () => {
       userName: 'JuanCamiloM21',
       avatar:
         'https://s.gravatar.com/avatar/eca2c29ebc21e6971f9d456eb53f4812?s=80',
-      image: '',
+      image:
+        'https://res.cloudinary.com/dbqhlxenn/image/upload/v1597456315/Master_atraxp.png',
       text: tweetMessage,
     });
 
@@ -42,12 +43,12 @@ const Twittear = () => {
                 <Gallery />
               </a>
             </li>
-            <li>
+            <li className='Gif'>
               <a href='#'>
                 <Gif />
               </a>
             </li>
-            <li>
+            <li className='Staticst'>
               <a href='#'>
                 <Staticst />
               </a>
@@ -57,7 +58,7 @@ const Twittear = () => {
                 <Emoji />
               </a>
             </li>
-            <li>
+            <li className='Calendar'>
               <a href='#'>
                 <Calendar />
               </a>
