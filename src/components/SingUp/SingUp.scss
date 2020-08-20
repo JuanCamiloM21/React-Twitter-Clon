@@ -1,0 +1,49 @@
+@import '../../containers/Globales.scss';
+
+.SingUp {
+  padding-top: 20px;
+  margin: 50px auto;
+  border-radius: 20px;
+  background-color: $trends-color;
+  max-width: 400px;
+  text-align: center;
+
+  .Form {
+    padding: 20px;
+    text-align: start;
+    label {
+      display: block;
+      margin: 10px auto 5px auto;
+      display: block;
+      width: 90%;
+    }
+    input {
+      display: block;
+      width: 90%;
+      height: 30px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      margin: auto;
+    }
+
+    button {
+      font-size: 15px;
+      font-weight: bold;
+      width: 90%;
+      display: block;
+      margin: 25px auto 20px auto;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: $button-color;
+      color: $tipography;
+    }
+
+    p {
+      text-align: center;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
